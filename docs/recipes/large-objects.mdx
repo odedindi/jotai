@@ -78,8 +78,8 @@ const People = () => {
   const [peopleAtoms] = useAtom(peopleAtomsAtom)
   return (
     <div>
-      {peopleAtoms.map((personAtom) => (
-        <Person personAtom={personAtom} key={`${personAtom}`} />
+      {peopleAtoms.map((personAtom, index) => (
+        <Person key={index} personAtom={personAtom} />
       ))}
     </div>
   )
@@ -112,8 +112,8 @@ const Tags = () => {
   const [tagAtoms] = useAtom(tagsAtomsAtom)
   return (
     <div>
-      {tagAtoms.map((tagAtom) => (
-        <Tag key={`${tagAtom}`} tagAtom={tagAtom} />
+      {tagAtoms.map((tagAtom, index) => (
+        <Tag key={index} tagAtom={tagAtom} />
       ))}
     </div>
   )
